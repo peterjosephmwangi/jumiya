@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jumiya</title>
+    <title>Fashion</title>
 
     <!-- css supporting files  -->
     <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
@@ -26,9 +26,8 @@
       <!-- insert carousel.html using jinja2 templates  -->
       {% include 'carousel.html' %}
 
-      <!-- insert all phones from db  -->
       <br />
-      <h3 class="bg-warning text-white p-1">Phone Accessories</h3>
+      <h3 class="bg-warning text-white p-1">Dresses Accessories</h3>
       <section class="slider p-4">
         <ul class="cs-hidden autoWidth">
           <!-- we stored phones in an item variable called phones  -->
@@ -37,27 +36,27 @@
           <!-- index 0 = product_id, index 1 = product_name, index 2= product_desc  -->
 
           <!-- loop all the phone items  -->
-          {% for singlephone in phones %}
+          {% for singleitem in dresses %}
           <li>
             <div class="box">
               <div class="slide-img">
                 <img
-                  src="../static/images/{{ singlephone[5] }}"
-                  alt="{{ singlephone[1] }}"
+                  src="../static/images/{{ singleitem[5] }}"
+                  alt="{{ singleitem[1] }}"
                   width="50"
                   height="50"
                 />
                 <!-- put an overlay button  -->
                 <div class="overlay">
-                  <a href="/single/{{singlephone[0]}}" class="buy-btn"
+                  <a href="/single/{{singleitem[0]}}" class="buy-btn"
                     >Buy Now</a
                   >
                 </div>
               </div>
 
               <div class="detail-box">
-                {{ singlephone[1] }} <br />
-                <b class="text-warning"> KES {{ singlephone[3] }}</b>
+                {{ singleitem[1] }} <br />
+                <b class="text-warning"> KES {{ singleitem[3] }}</b>
               </div>
             </div>
           </li>
@@ -68,7 +67,7 @@
       </section>
 
       <br />
-      <h3 class="bg-warning text-white p-1">Electronics Accessories</h3>
+      <h3 class="bg-warning text-white p-1">hand bags Accessories</h3>
       <section class="slider p-4">
         <ul class="cs-hidden autoWidth">
           <!-- we stored phones in an item variable called phones  -->
@@ -77,25 +76,27 @@
           <!-- index 0 = product_id, index 1 = product_name, index 2= product_desc  -->
 
           <!-- loop all the phone items  -->
-          {% for singlephone in electronics %}
+          {% for singleitem in handbags %}
           <li>
             <div class="box">
               <div class="slide-img">
                 <img
-                  src="../static/images/{{ singlephone[5] }}"
-                  alt="{{ singlephone[1] }}"
+                  src="../static/images/{{ singleitem[5] }}"
+                  alt="{{ singleitem[1] }}"
                   width="50"
                   height="50"
                 />
                 <!-- put an overlay button  -->
                 <div class="overlay">
-                  <a href="" class="buy-btn">Buy Now</a>
+                  <a href="/single/{{singleitem[0]}}" class="buy-btn"
+                    >Buy Now</a
+                  >
                 </div>
               </div>
 
               <div class="detail-box">
-                {{ singlephone[1] }} <br />
-                <b class="text-warning"> KES {{ singlephone[3] }}</b>
+                {{ singleitem[1] }} <br />
+                <b class="text-warning"> KES {{ singleitem[3] }}</b>
               </div>
             </div>
           </li>
@@ -106,7 +107,7 @@
       </section>
 
       <br />
-      <h3 class="bg-warning text-white p-1">Shoes Accessories</h3>
+      <h3 class="bg-warning text-white p-1">Caps Accessories</h3>
       <section class="slider p-4">
         <ul class="cs-hidden autoWidth">
           <!-- we stored phones in an item variable called phones  -->
@@ -115,25 +116,27 @@
           <!-- index 0 = product_id, index 1 = product_name, index 2= product_desc  -->
 
           <!-- loop all the phone items  -->
-          {% for singlephone in shoes %}
+          {% for singleitem in caps %}
           <li>
             <div class="box">
               <div class="slide-img">
                 <img
-                  src="../static/images/{{ singlephone[5] }}"
-                  alt="{{ singlephone[1] }}"
+                  src="../static/images/{{ singleitem[5] }}"
+                  alt="{{ singleitem[1] }}"
                   width="50"
                   height="50"
                 />
                 <!-- put an overlay button  -->
                 <div class="overlay">
-                  <a href="" class="buy-btn">Buy Now</a>
+                  <a href="/single/{{singleitem[0]}}" class="buy-btn"
+                    >Buy Now</a
+                  >
                 </div>
               </div>
 
               <div class="detail-box">
-                {{ singlephone[1] }} <br />
-                <b class="text-warning"> KES {{ singlephone[3] }}</b>
+                {{ singleitem[1] }} <br />
+                <b class="text-warning"> KES {{ singleitem[3] }}</b>
               </div>
             </div>
           </li>
@@ -144,7 +147,7 @@
       </section>
 
       <br />
-      <h3 class="bg-warning text-white p-1">Beauty Accessories</h3>
+      <h3 class="bg-warning text-white p-1">Socks Accessories</h3>
       <section class="slider p-4">
         <ul class="cs-hidden autoWidth">
           <!-- we stored phones in an item variable called phones  -->
@@ -153,25 +156,27 @@
           <!-- index 0 = product_id, index 1 = product_name, index 2= product_desc  -->
 
           <!-- loop all the phone items  -->
-          {% for singlephone in beauty %}
+          {% for singleitem in socks %}
           <li>
             <div class="box">
               <div class="slide-img">
                 <img
-                  src="../static/images/{{ singlephone[5] }}"
-                  alt="{{ singlephone[1] }}"
+                  src="../static/images/{{ singleitem[5] }}"
+                  alt="{{ singleitem[1] }}"
                   width="50"
                   height="50"
                 />
                 <!-- put an overlay button  -->
                 <div class="overlay">
-                  <a href="" class="buy-btn">Buy Now</a>
+                  <a href="/single/{{singleitem[0]}}" class="buy-btn"
+                    >Buy Now</a
+                  >
                 </div>
               </div>
 
               <div class="detail-box">
-                {{ singlephone[1] }} <br />
-                <b class="text-warning"> KES {{ singlephone[3] }}</b>
+                {{ singleitem[1] }} <br />
+                <b class="text-warning"> KES {{ singleitem[3] }}</b>
               </div>
             </div>
           </li>
@@ -182,7 +187,7 @@
       </section>
 
       <br />
-      <h3 class="bg-warning text-white p-1">Clothes Accessories</h3>
+      <h3 class="bg-warning text-white p-1">Belts Accessories</h3>
       <section class="slider p-4">
         <ul class="cs-hidden autoWidth">
           <!-- we stored phones in an item variable called phones  -->
@@ -191,25 +196,27 @@
           <!-- index 0 = product_id, index 1 = product_name, index 2= product_desc  -->
 
           <!-- loop all the phone items  -->
-          {% for singlephone in clothes %}
+          {% for singleitem in belt %}
           <li>
             <div class="box">
               <div class="slide-img">
                 <img
-                  src="../static/images/{{ singlephone[5] }}"
-                  alt="{{ singlephone[1] }}"
+                  src="../static/images/{{ singleitem[5] }}"
+                  alt="{{ singleitem[1] }}"
                   width="50"
                   height="50"
                 />
                 <!-- put an overlay button  -->
                 <div class="overlay">
-                  <a href="" class="buy-btn">Buy Now</a>
+                  <a href="/single/{{singleitem[0]}}" class="buy-btn"
+                    >Buy Now</a
+                  >
                 </div>
               </div>
 
               <div class="detail-box">
-                {{ singlephone[1] }} <br />
-                <b class="text-warning"> KES {{ singlephone[3] }}</b>
+                {{ singleitem[1] }} <br />
+                <b class="text-warning"> KES {{ singleitem[3] }}</b>
               </div>
             </div>
           </li>
@@ -218,83 +225,9 @@
           {% endfor %}
         </ul>
       </section>
-
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form action="/register" method="post">
-                <label for=""> Username</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="username"
-                  required
-                />
-                <br />
-                <label for="">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  required
-                />
-                <br />
-                <label for="">Gender</label>
-                <select name="gender" id="" class="form-control" required>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-                <br />
-
-                <label for="">Phone</label>
-                <input type="tel" class="form-control" name="phone" required />
-                <br />
-
-                <label for="">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  name="password"
-                  required
-                />
-
-                <br />
-                <a href="/login">Already have an Account? Click to Login</a>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- include the footer  -->
-    <!-- we use jinja2 template  -->
     {% include 'footer.html' %}
   </body>
 </html>
